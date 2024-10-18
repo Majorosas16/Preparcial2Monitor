@@ -10,7 +10,7 @@ export let emptyState: AppState = {
 export let appState = storage.get<AppState>({
 	key: PersistanceKeys.STORE,
 	defaultValue: emptyState,
-  });
+});
 
 let observers: Observer[] = [];
 

@@ -55,6 +55,8 @@ class TaskItem extends HTMLElement {
 			</article>
 		`;
 
+		//En el input type="checkbox": si el estado de la tarea es true va a darle el atricuto de check sino se va a quedar en blanco. Muestra el checkbox relleno o sin rellenar
+
 		const deleteButton = this.shadowRoot?.querySelector('.delete-task')
 		const checkButton = this.shadowRoot?.querySelector('.check-task')
 		deleteButton?.addEventListener('click', () => {

@@ -2,8 +2,11 @@ import { addObserver, appState } from "../../store/store";
 import TaskItem, { TaskItemProps } from "../TaskItem/index";
 import "../TaskItem/index";
 
+
 class TaskList extends HTMLElement {
+
 	taskItems: TaskItem[] = []
+
 	constructor() {
 		super();
 		this.attachShadow({ mode: 'open' });
