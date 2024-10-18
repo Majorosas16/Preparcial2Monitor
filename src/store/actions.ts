@@ -3,8 +3,11 @@ import { Task } from '../types/task';
 
 export const addTask = (payload: Task) => {
 	return {
-		action: Actions.ADD_TASK,
+		action: Actions.ADD_TASK, // "ADD_TASK" ---> esto está en el tipado
 		payload,
+			// id: number,
+			// title: string,
+			// state: boolean
 	};
 };
 

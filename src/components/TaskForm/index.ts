@@ -25,12 +25,13 @@ class TaskForm extends HTMLElement {
         const formElement = this.shadowRoot?.querySelector('.task-form') //Con el query selector se trae la referencia del form y la guarda en formElement.
 
         formElement?.addEventListener("submit", (e) => {
-            e.preventDefault() //paras qque al enviarse no se refresque la página.
+            e.preventDefault() //paras que al enviarse no se refresque la página.
             
-            const inputValue = this.shadowRoot?.querySelector("#text-input") as HTMLInputElement
+            const inputValue = this.shadowRoot?.querySelector("#text-input") as HTMLInputElement // el HTMLInputElement permite acceder a su valor (.value)
         
             const newTask: Task = {
-                id: new Date().getTime(),
+                id: new Date().getTime(), //Ese id es algo que se crea dependiendo de la fecha horaria. Es un id único
+                
                 title: inputValue.value,
                 state: false
             }

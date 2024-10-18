@@ -2,13 +2,14 @@ import { Actions } from '../types/store';
 import { Task } from '../types/task';
 
 export const reducer = (currentAction: any, currentState: any) => {
+
 	const { action, payload } = currentAction;
 
 	switch (action) {
-		case Actions.ADD_TASK:
+		case Actions.ADD_TASK: // "ADD_TASK"
 			return {
-				...currentState,
-				tasks: [...currentState.tasks, payload],
+				...currentState, // el estado actual
+				tasks: [...currentState.tasks, payload], //no se sobreescribe la variable si no que se agrega (es como un push)
 			};
 
 		case Actions.REMOVE_TASK:
