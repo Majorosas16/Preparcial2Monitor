@@ -15,17 +15,12 @@ class TaskItem extends HTMLElement {
 	constructor() {
 		super();
 		this.attachShadow({ mode: 'open' });
-		addObserver(this)
+		addObserver(this) //observador
 
 	}
 
 	static get observedAttributes() {
-		const attrs: Record<TaskItemProps, null> = {
-			uid: null,
-			tasktitle: null,
-			state: null,
-		}
-		return Object.keys(attrs)
+		return Object.values(TaskItemProps);
 	}
 
 	connectedCallback() {
