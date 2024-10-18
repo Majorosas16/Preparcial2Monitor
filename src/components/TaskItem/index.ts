@@ -55,14 +55,16 @@ class TaskItem extends HTMLElement {
 			</article>
 		`;
 
-		//En el input type="checkbox": si el estado de la tarea es true va a darle el atricuto de check sino se va a quedar en blanco. Muestra el checkbox relleno o sin rellenar
+		//En el input type="checkbox": si el estado de la tarea es true va a darle el atributo de check sino se va a quedar en blanco. *Muestra el checkbox relleno o sin rellenar*
 
-		const deleteButton = this.shadowRoot?.querySelector('.delete-task')
-		const checkButton = this.shadowRoot?.querySelector('.check-task')
+		const deleteButton = this.shadowRoot?.querySelector('.delete-task')//Traigo la referencia del boton eliminar
+
+		const checkButton = this.shadowRoot?.querySelector('.check-task') //Traigo la referencia del check
+
 		deleteButton?.addEventListener('click', () => {
 			console.log("click", this.uid);
 
-			dispatch(removeTask(this.uid!))
+			dispatch(removeTask(this.uid!)) //Como la tarea esta identificada con un id entonves gracias a la acción se remueve toda la tarea
 		})
 
 		checkButton?.addEventListener('change', () => {
@@ -70,6 +72,8 @@ class TaskItem extends HTMLElement {
 		})
 
 	}
+
+	// El signo de admiración (!) en TypeScript se usa para indicar que el desarrollador está seguro de que una variable no es null ni undefined en ese punto del código
 
 }
 

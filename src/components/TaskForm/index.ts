@@ -2,6 +2,7 @@ import { addTask } from "../../store/actions";
 import { addObserver, appState, dispatch } from "../../store/store";
 import { Task } from "../../types/task";
 
+//Esta clase es solo el formulario
 class TaskForm extends HTMLElement {
 	constructor() {
 		super();
@@ -24,6 +25,9 @@ class TaskForm extends HTMLElement {
 
         const formElement = this.shadowRoot?.querySelector('.task-form') //Con el query selector se trae la referencia del form y la guarda en formElement.
 
+
+        //Esta parte del código crea la tarea cuando el fromulario hace el submit
+        
         formElement?.addEventListener("submit", (e) => {
             e.preventDefault() //paras que al enviarse no se refresque la página.
             

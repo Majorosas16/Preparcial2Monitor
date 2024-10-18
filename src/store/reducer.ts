@@ -15,7 +15,7 @@ export const reducer = (currentAction: any, currentState: any) => {
 		case Actions.REMOVE_TASK:
 			return {
 				...currentState,
-				tasks: currentState.tasks.filter((task: Task) => task.id !== payload),
+				tasks: currentState.tasks.filter((task: Task) => task.id !== payload), //compara el id que le llegó de actions con la tarea que ya está en el appState 
 			};
 
 		case Actions.TOGGLE_TASK:

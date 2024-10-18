@@ -2,15 +2,20 @@ import { reducer } from './reducer';
 import { AppState, Observer } from '../types/store';
 import storage, { PersistanceKeys } from '../utils/storage';
 
-//El estado global, appState
+//EL APPSTATE ES: un objeto que tiene elemntos que se van a necesitar en la pagina. AQUI ABAJO, INITALAPASTATE. A medida que baya navegano va a ir guardando, cosas que son repetitivas, valores que se necesitan.
 export let emptyState: AppState = {
 	tasks: []
 };
 
+//El estado global, appState
 export let appState = storage.get<AppState>({
 	key: PersistanceKeys.STORE,
 	defaultValue: emptyState,
 });
+
+// lo de arriba es lo mismo que esto
+// string. Funcione
+// export let appState = storage.get('TASKS', initialAppState)
 
 let observers: Observer[] = [];
 

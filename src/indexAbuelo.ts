@@ -20,7 +20,7 @@ class AppContainer extends HTMLElement {
 		
 		<task-list></task-list>
 		`;
-
+//llama al componente que solo tiene el form y luego llama al array o al componente que tiene el listado de las tareas qu fuero agregadas en el form
 	}
 }
 

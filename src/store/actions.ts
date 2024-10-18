@@ -11,7 +11,7 @@ export const addTask = (payload: Task) => {
 	};
 };
 
-export const removeTask = (payload: number) => {
+export const removeTask = (payload: number) => { //lo que va a recibir será el id que se crea de la tarea, para así eliminarla con ese identificador
 	return {
 		action: Actions.REMOVE_TASK,
 		payload,
